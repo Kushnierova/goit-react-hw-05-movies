@@ -1,20 +1,32 @@
-import TrandingMovies from 'components/MoviesTranding';
+import MoviesTranding from 'components/MoviesTranding';
+import { fetchMoviesTrending } from 'services/api';
 import { useEffect, useState } from 'react';
 
 function Home() {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([
+    'movie-1',
+    'movie-2',
+    'movie-3',
+    'movie-4',
+    'movie-5',
+  ]);
 
   useEffect(() => {
-    const options = { method: 'GET' };
+    const fetchMovies = async () => {
+      try {
+        const data = await fetchMoviesTrending();
+        const movies = data.results;
+        setMovies(movies);
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
-    fetch('https://example.com/3/movie/popular', options)
-      .then(response => response.json())
-      .then(response => console.log(response))
-      .catch(err => console.error(err));
-  });
+    fetchMovies();
+  }, []);
   return (
     <div>
-      <TrandingMovies />
+      <MoviesTranding movies={movies} />
     </div>
   );
 }
