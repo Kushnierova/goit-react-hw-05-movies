@@ -3,13 +3,7 @@ import { fetchMoviesTrending } from 'services/api';
 import { useEffect, useState } from 'react';
 
 function Home() {
-  const [movies, setMovies] = useState([
-    'movie-1',
-    'movie-2',
-    'movie-3',
-    'movie-4',
-    'movie-5',
-  ]);
+  const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     const fetchMovies = async () => {

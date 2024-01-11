@@ -23,3 +23,16 @@ export async function fetchMoviesTrending() {
     console.error(error);
   }
 }
+
+export async function fetchMoviesSearching(name) {
+  try {
+    const { data } = await axios.get(
+      `https://api.themoviedb.org//search/movie?query=${name}&language=en-US&include_adult=false`,
+      options
+    );
+
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+}
