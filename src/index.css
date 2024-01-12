@@ -1,6 +1,7 @@
 @import-normalize; /* bring in normalize.css styles */
 
 body {
+  color: blueviolet;
   margin: 25px;
   background-color: rgb(2, 2, 8);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -16,4 +17,7 @@ code {
 }
 button {
   cursor: pointer;
+}
+.loading{
+  color: blueviolet;
 }
