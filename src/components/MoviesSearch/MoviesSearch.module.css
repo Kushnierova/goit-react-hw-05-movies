@@ -1,0 +1,30 @@
+.title {
+  text-transform: uppercase;
+  color: blueviolet;
+  font-size: 26px;
+  font-weight: 600;
+}
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.item {
+  list-style: none;
+  background-color: rgb(29, 5, 43);
+  border-radius: 5px;
+  box-shadow: rgb(127, 26, 167) 0px 0px 20px;
+}
+.img {
+  width: 200px;
+}
+.movieTitle {
+  text-transform: uppercase;
+  text-align: center;
+  width: 200px;
+  color: rgb(155, 61, 244);
+  text-shadow: 2px 2px 4px rgb(149, 15, 158);
+  font-size: 14px;
+  font-weight: 900;
+  text-overflow: unset;
+}

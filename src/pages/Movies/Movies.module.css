@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  justify-content: center;
+}
+.input {
+  color: rgb(47, 15, 76);
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  height: 40px;
+  width: 300px;
+  background-color: rgb(189, 140, 235);
+  border-radius: 20px 0 0 20px;
+}
+.btn {
+  height: 63px;
+  background-color: rgb(136, 59, 207);
+  border-radius: 0 20px 20px 0;
+  font-weight: 800;
+  font-size: 18px;
+  color: rgb(37, 18, 55);
+}
+.btn:hover,
+.btn:focus {
+  background-color: rgb(211, 177, 239);
+}
+.input::placeholder {
+  color: rgb(88, 59, 96);
+  padding-left: 10px;
+}
