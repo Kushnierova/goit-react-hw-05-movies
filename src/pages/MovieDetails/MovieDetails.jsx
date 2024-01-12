@@ -41,7 +41,7 @@ const MovieDetails = () => {
   return (
     <div>
       <button className={css.btn}>
-        <Link to={backLinkLocationRef.current} >Go Back</Link>
+        <Link to={backLinkLocationRef.current}>Go Back</Link>
       </button>
 
       <div className={css.container}>
@@ -79,8 +79,8 @@ const MovieDetails = () => {
         </div>
       </div>
       <Suspense fallback={<p className="loading">Loading...</p>}>
-          <Outlet />
-        </Suspense>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };

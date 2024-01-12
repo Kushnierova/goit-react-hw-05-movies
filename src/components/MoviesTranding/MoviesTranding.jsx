@@ -1,9 +1,8 @@
-import { Link, useLocation, useSearchParams } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import css from './MoviesTranding.module.css';
 
 function MoviesTranding({ movies }) {
   const location = useLocation();
-  // const [searchParams, setSearchParams] = useSearchParams();
 
   return (
     <div>
@@ -13,7 +12,7 @@ function MoviesTranding({ movies }) {
           return (
             poster_path && (
               <li key={id} className={css.item}>
-                <Link  key={id} to={`movies/${id}`} state={{ from: location }}>
+                <Link key={id} to={`movies/${id}`} state={{ from: location }}>
                   {poster_path ? (
                     <img
                       className={css.img}

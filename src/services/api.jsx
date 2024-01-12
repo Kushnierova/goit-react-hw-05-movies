@@ -38,28 +38,37 @@ export async function fetchMoviesSearching(name) {
 }
 
 export async function fetchMovieDetailsById(id) {
-  try{
- const {data} = await axios.get(`https://api.themoviedb.org/3/movie/${id}?language=en-US`, options);
-   return data
-    } catch (error) {
-   console.error(error);
- }
+  try {
+    const { data } = await axios.get(
+      `https://api.themoviedb.org/3/movie/${id}?language=en-US`,
+      options
+    );
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 export async function fetchMovieCreditsById(id) {
-  try{
- const {data} = await axios.get(`https://api.themoviedb.org/3/movie/${id}/credits?language=en-US`, options);
-   return data
-    } catch (error) {
-   console.error(error);
- }
+  try {
+    const { data } = await axios.get(
+      `https://api.themoviedb.org/3/movie/${id}/credits?language=en-US`,
+      options
+    );
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 export async function fetchMovieReviewsById(id) {
-  try{
- const {data} = await axios.get(`https://api.themoviedb.org/3/movie/${id}/reviews?language=en-US`, options);
-   return data
-    } catch (error) {
-   console.error(error);
- }
+  try {
+    const { data } = await axios.get(
+      `https://api.themoviedb.org/3/movie/${id}/reviews?language=en-US`,
+      options
+    );
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
 }
