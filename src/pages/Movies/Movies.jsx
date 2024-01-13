@@ -26,7 +26,10 @@ function Movies() {
     e.preventDefault();
     const query = e.target.query.value;
     setSearchParams({ query });
-    e.target.reset();
+  };
+  const updateQueryString = query => {
+    const nextParams = query !== '' && { query };
+    setSearchParams(nextParams);
   };
 
   return (
@@ -35,6 +38,8 @@ function Movies() {
         <label>
           <input
             type="text"
+            value={searchQuery}
+            onChange={e => updateQueryString(e.target.value)}
             name="query"
             className={css.input}
             placeholder="Search for a movie"

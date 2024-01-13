@@ -1,12 +1,12 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { lazy } from 'react';
 import Layout from './Layout';
-import MovieCredits from './MovieCredits';
-import MovieReviews from './MovieReviews';
 
 const Home = lazy(() => import('../pages/Home'));
 const Movies = lazy(() => import('../pages/Movies'));
 const MovieDetails = lazy(() => import('../pages/MovieDetails'));
+const MovieCredits = lazy(() => import('./MovieCredits'));
+const MovieReviews = lazy(() => import('./MovieReviews'));
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
             <Route path="reviews" element={<MovieReviews />} />
           </Route>
 
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
     </div>
